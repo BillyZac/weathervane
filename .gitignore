@@ -2,3 +2,5 @@ build/
 node_modules/
 notes.md
 requirements.md
+firebase.json
+sample.json

@@ -1,51 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Weather!</title>
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Baku</h1>
-    <h2>Five day forecast</h2>
-    <div class="card-deck-wrapper">
-      <div class="card-deck">
-        <div class="card">
-          <!-- <img class="card-img-top" data-src="holder.js/100%x200/" alt="Card image cap"> -->
-          <div class="card-block">
-            <h4 class="card-title">Monday</h4>
-            <p class="card-text">High: 73F</p>
-            <p class="card-text">Low: 53F</p>
-            <p class="card-text">Rainy</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <!-- <img class="card-img-top" data-src="holder.js/100%x200/" alt="Card image cap"> -->
-          <div class="card-block">
-            <h4 class="card-title">Tuesday</h4>
-            <p class="card-text">High: 73F</p>
-            <p class="card-text">Low: 53F</p>
-            <p class="card-text">Rainy</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <!-- <img class="card-img-top" data-src="holder.js/100%x200/" alt="Card image cap"> -->
-          <div class="card-block">
-            <h4 class="card-title">Wednesday</h4>
-            <p class="card-text">High: 73F</p>
-            <p class="card-text">Low: 53F</p>
-            <p class="card-text">Rainy</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    <div ui-view></div>
+    <script src="bundle.js" type="text/javascript"></script>
   </body>
 </html>
