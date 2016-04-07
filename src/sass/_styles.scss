@@ -1,3 +1,22 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background: $blue;
+  color: white;
+  height: 100px;
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 2rem;
+
+  h1 {
+    font-family: 'Lobster', cursive;
+  }
+}
+
 .high-temperature {
   color: $red;
 }
@@ -18,8 +37,6 @@
 }
 
 .city-name {
-  // background: #444;
-  // color: #fff;
   padding: 5px;
   margin: 0;
 }

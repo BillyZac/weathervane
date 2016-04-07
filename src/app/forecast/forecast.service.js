@@ -4,8 +4,7 @@
 
     function forecastService($http) {
       var service = {
-          getForecast: getForecast,
-          hello: 42
+          getForecast: getForecast
       }
       return service
 
@@ -17,22 +16,17 @@
           })
             .then(function(response) {
               var days = []
-              console.log(response);
               var dataPoints = response.data.body.list
               var index = 0
               for (dayCounter = 1; dayCounter <=5; dayCounter++) {
                 var day = dataPoints.slice(index, index + 8)
-                console.log(minMaxTemperature(day))
-
                 var dayToPush = {
                   time: dataPoints[index].dt * 1000, // Time comes back in seconds. Convert to milliseconds.
                   minimumTemperature: minMaxTemperature(day).minimumTemperature,
                   maximumTemperature: minMaxTemperature(day).maximumTemperature,
                   weather: dataPoints[index].weather[0].main
                 }
-
                 days.push(dayToPush)
-
                 index += 8
               }
 
@@ -41,7 +35,6 @@
                 days: days
               })
             })
-
         })
       }
     }

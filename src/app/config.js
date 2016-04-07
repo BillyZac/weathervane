@@ -1,8 +1,6 @@
 (function () {
-  const angular = require('angular')
-
   angular.module('app')
-  .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', configRoutes])
+    .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', configRoutes])
 
   function configRoutes($stateProvider, $urlRouterProvider, $locationProvider) {
         $stateProvider
