@@ -9,13 +9,11 @@
       }
       return service
 
-      /****/
-
       function getForecast() {
         return new Promise(function(resolve, reject) {
           $http({
             method: 'GET',
-            url: 'http://api.openweathermap.org/data/2.5/forecast/city?id=4463523&APPID=6d8ed3c942a2a9cfd14c986e3044c481&units=metric'
+            url: 'http://api.openweathermap.org/data/2.5/forecast/city?id=4463523&APPID=6d8ed3c942a2a9cfd14c986e3044c481&units=imperial'
           })
             .then(function(response) {
               var days = []
@@ -37,7 +35,6 @@
 
                 index += 8
               }
-
 
               resolve({
                 cityName: response.data.city.name,
@@ -61,15 +58,3 @@
     }
 
 }())
-
-
-// response.list.reduce(function(prev, current, index) {
-//   if (index % 8 === 0) {
-//     prev.push({
-//       time: current.dt * 1000, // Time comes back in seconds. Convert to milliseconds.
-//       temperature: current.main.temp,
-//       weather: current.weather[0].main
-//     })
-//   }
-//   return prev
-// }, [])

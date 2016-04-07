@@ -1,4 +1,4 @@
-<h1>{{ forecast.cityName }}</h1>
+<h1 class="city-name">{{ forecast.cityName }}</h1>
 <h2>Five day forecast</h2>
 
 <div class="card-deck-wrapper">
@@ -8,8 +8,8 @@
       <!-- <img class="card-img-top" data-src="holder.js/100%x200/" alt="Card image cap"> -->
       <div class="card-block">
         <h4 class="card-title">{{ day.time | date:'EEEE' }}</h4>
-        <p class="card-text">{{ day.maximumTemperature }} F</p>
-        <p class="card-text">{{ day.minimumTemperature }} F</p>
+        <p class="card-text high-temperature">{{ day.maximumTemperature | number:0 }}°F</p>
+        <p class="card-text low-temperature">{{ day.minimumTemperature | number:0 }}°F</p>
         <p class="card-text">{{ day.weather }}</p>
         <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
       </div>
