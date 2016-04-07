@@ -1,4 +1,3 @@
-# Weathervane
 ![Weathervane logo](weathervane-logo.png)
 
 Shows the five day forecast for Denver, Colorado.
@@ -16,16 +15,16 @@ I started by drawing a wireframe. Simple though it may be, it was very helpful t
 ![Weathervane wireframe](weathervane-wireframe.png)
 
 ## Installation and usage
-Dependencies are managed using npm, so run:
+Dependencies are managed using npm, so after cloning, run:
 
 ```
 npm install
 ```
 
-Then:
+Then we'll build from _source_, fire up a local server, and open a browser using gulp. To do so, run:
 
 ```
 gulp start
 ```
 
-This builds from _source_ and open a new browser window. It also refreshes the browser whenever the code is changed.
+This will also refresh the browser whenever the code is changed.
