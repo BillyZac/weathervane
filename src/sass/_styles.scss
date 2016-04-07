@@ -1,8 +1,8 @@
 .high-temperature {
-  color: tomato;
+  color: $red;
 }
 .low-temperature {
-  color: aqua;
+  color: $blue;
 }
 
 .card-block {
@@ -16,7 +16,15 @@
 }
 
 .city-name {
-  background: #444;
-  color: #fff;
+  // background: #444;
+  // color: #fff;
   padding: 5px;
+  margin: 0;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 5px;
+  margin: 0 0 20px 0;
 }
