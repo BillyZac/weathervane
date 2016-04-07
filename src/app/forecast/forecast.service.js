@@ -13,12 +13,12 @@
         return new Promise(function(resolve, reject) {
           $http({
             method: 'GET',
-            url: 'http://api.openweathermap.org/data/2.5/forecast/city?id=4463523&APPID=6d8ed3c942a2a9cfd14c986e3044c481&units=imperial'
+            url: 'https://afternoon-beach-62638.herokuapp.com/4463523'
           })
             .then(function(response) {
               var days = []
               console.log(response);
-              var dataPoints = response.data.list
+              var dataPoints = response.data.body.list
               var index = 0
               for (dayCounter = 1; dayCounter <=5; dayCounter++) {
                 var day = dataPoints.slice(index, index + 8)
@@ -37,7 +37,7 @@
               }
 
               resolve({
-                cityName: response.data.city.name,
+                cityName: response.data.body.city.name,
                 days: days
               })
             })
