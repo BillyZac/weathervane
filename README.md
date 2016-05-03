@@ -28,3 +28,16 @@ gulp start
 ```
 
 This will also refresh the browser whenever the code is changed.
+
+## Running tests with Protractor
+Protractor tests are set to run with the command
+
+```
+npm test
+```
+
+This will start up the app in a browser (or two) and test that specified features is working as expected.
+
+The tests are spelled out _spec.js_ files, such as _src/app/forecast.spec.js_.
+
+Note that the tests require that the app is running, so be sure to start up the app before running the tests.
